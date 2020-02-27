@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+{% block head %} {% endblock %}
+
+{% block body %}  
+ <div class="container">
+ <div class="row">
+  <div class="card border-danger mb-3">
+ {% if app.user %}
+
+<div class="alert alert-success" role="alert">
+ <h4> Vous êtes connecté en tant que {{ app.user.username }} </h4>
+</div>
+  
+  
+    {% endif %}
+     
+  <div class="card-body">
+  <h2 class="text-success"> Bienvenue Sur L'Espace D'administration Du Site Rivière d'or</h2>
+  <h5> Pour Quitter L'espace Cliquer Sur <br><br><a class="btn btn-danger" href="{{ path('app_logout') }}">Déconnecter</a></h5>
+ </div>
+</div>
+</div>
+ </div>
+{% endblock %}
+

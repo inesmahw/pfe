@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Astuces{% endblock %}
+
+{% block body %}
+    <h1>Astuces</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ astuce.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ astuce.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ astuce.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('astuces_index') }}">back to list</a>
+
+    <a href="{{ path('astuces_edit', {'id': astuce.id}) }}">edit</a>
+
+    {{ include('astuces/_delete_form.html.twig') }}
+{% endblock %}

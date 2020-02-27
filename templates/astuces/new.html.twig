@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Astuces{% endblock %}
+
+{% block body %}
+    <h1>Create new Astuces</h1>
+
+    {{ include('astuces/_form.html.twig') }}
+
+    <a href="{{ path('astuces_index') }}">back to list</a>
+{% endblock %}

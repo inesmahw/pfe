@@ -1,0 +1,19 @@
+login:
+    path: /
+    controller: App\Controller\SecurityController::login
+index:
+    path: /index
+    controller: App\Controller\HomeController::index
+product:
+    path: /product
+    controller: App\Controller\ProductController::product
+recettes:
+    path: /recettes
+    controller: App\Controller\ProductController::recettes
+astuces:
+    path: /astuces
+    controller: App\Controller\ProductController::astuces
+contact:
+    path: /contact
+    controller: App\Controller\ProductController::contact
+
